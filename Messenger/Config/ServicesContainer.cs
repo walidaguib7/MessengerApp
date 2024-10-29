@@ -76,6 +76,7 @@ public static class ServicesContainer
             )
             ;
     }
+    
     public static void AddMailing(this IServiceCollection services, WebApplicationBuilder builder)
     {
         var smtpSettings = builder.Configuration.GetSection("Smtp");

@@ -1,0 +1,6 @@
+﻿app.db
+bin/
+Storage/
+obj/
+Properties/
+Messenger.http
