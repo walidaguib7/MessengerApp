@@ -1,8 +1,11 @@
 using Messenger.Config;
+using Messenger.Routes;
 using Microsoft.Extensions.FileProviders;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+Log.Logger = new LoggerConfiguration().CreateLogger();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -44,9 +47,9 @@ app.UseDirectoryBrowser(new DirectoryBrowserOptions
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
-app.UseAuthentication();
+app.UseAuthorization();
 
-
+app.AuthEndpoints();
 
 app.Run();
 

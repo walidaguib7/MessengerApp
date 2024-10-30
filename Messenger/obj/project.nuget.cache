@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "02bshs9b6N0k2pkx9cOxUeA6DhBwKQvdrgx/prYpPt7nGbcpzNVO3Sdbr/kl0/hDwYRv8dcw5LUwzDyWsOnccw==",
+  "dgSpecHash": "Gi9jovWS2nIatYVSg1l1SZsJR9yWY92I8ZCHIoYeGk6TiulVHuX5c+ZRUDs5pSS/hA+2ycl4LHDseIyldq0daw==",
   "success": true,
   "projectFilePath": "D:\\AW7\\Messenger\\Messenger\\Messenger.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.1.1\\microsoft.aspnetcore.authentication.2.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",

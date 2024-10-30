@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Messenger.Migrations
 {
     /// <inheritdoc />
-    public partial class configModels : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -80,7 +80,7 @@ namespace Messenger.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "TEXT", nullable: false),
-                    fileId = table.Column<int>(type: "INTEGER", nullable: false),
+                    fileId = table.Column<int>(type: "INTEGER", nullable: true),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -103,8 +103,7 @@ namespace Messenger.Migrations
                         name: "FK_AspNetUsers_files_fileId",
                         column: x => x.fileId,
                         principalTable: "files",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

@@ -1,8 +1,11 @@
 ﻿using System.Collections.Immutable;
+using FluentValidation;
 using Messenger.Database;
+using Messenger.Dtos.User;
 using Messenger.Models;
 using Messenger.Repositories;
 using Messenger.Services;
+using Messenger.Validations.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +18,15 @@ public static class ServicesContainer
 {
     public static void AddServices(this IServiceCollection services)
     {
+        services.Addvalidation();
         services.AddSingleton<IToken,TokenService>();
+        services.AddScoped<IAuth, AuthService>();
+    }
+
+    public static void Addvalidation(this IServiceCollection services)
+    {
+        services.AddKeyedScoped<IValidator<LoginDto> , LoginValidation>("validateLogin");
+        services.AddKeyedScoped<IValidator<RegisterDto> , RegisterValidation>("validateRegistration");
     }
 
     public static void AddIdentity(this IServiceCollection services)

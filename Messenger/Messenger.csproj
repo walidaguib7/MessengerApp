@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="13.0.1" />
+        <PackageReference Include="FluentValidation" Version="11.10.0" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
         <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.39" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
@@ -29,12 +30,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Dtos\" />
-      <Folder Include="Helpers\" />
-      <Folder Include="Mapping\" />
-      <Folder Include="Routes\" />
-      <Folder Include="Storage\" />
-      <Folder Include="Validations\" />
+      <Folder Include="Storage\Images\" />
+      <Folder Include="Storage\videos\" />
+      <Folder Include="Storage\Vocals\" />
     </ItemGroup>
 
 </Project>

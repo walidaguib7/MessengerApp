@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Messenger.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20241029181335_configModels")]
-    partial class configModels
+    [Migration("20241030215850_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -235,7 +235,7 @@ namespace Messenger.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("fileId")
+                    b.Property<int?>("fileId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -492,9 +492,7 @@ namespace Messenger.Migrations
                 {
                     b.HasOne("Messenger.Models.Files", "file")
                         .WithOne("user")
-                        .HasForeignKey("Messenger.Models.User", "fileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Messenger.Models.User", "fileId");
 
                     b.Navigation("file");
                 });
